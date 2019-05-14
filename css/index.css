@@ -135,43 +135,42 @@ body {
   height: 100%;
 }
 .container {
-  width: 1000px;
-  background-color: green;
-  margin: 0 auto;
+  max-width: 1000px;
+  margin: auto;
+  box-shadow: 30px 0 40px rgba(0, 0, 0, 0.3), -30px 0 40px rgba(0, 0, 0, 0.3);
 }
-header {
-  margin: 1.25rem auto;
-  padding: 10px;
-  display: flex;
+.navigation {
   width: 100%;
-  justify-content: space-between;
+  display: flex;
+  background-color: green;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 60px auto;
 }
-@media (max-width: 515px) {
-  header {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-  }
+.navigation nav {
+  display: flex;
 }
-header h1 {
-  font-size: 2rem;
-}
-@media (max-width: 515px) {
-  header h1 {
-    margin-bottom: 20px;
-  }
-}
-nav {
-  margin-left: 62px;
-  margin-right: 63px;
-}
-@media (max-width: 515px) {
-  nav {
-    margin-left: 0;
-  }
-}
-nav a {
-  margin-left: 20px;
-  font-size: 1.2rem;
+.navigation nav a {
+  color: black;
   text-decoration: none;
+  font-size: 1.2rem;
+  margin: 0.9rem 1rem;
+  padding-right: 1rem;
+}
+.navigation nav a:hover {
+  color: grey;
+}
+.jumbotron {
+  width: 85%;
+  height: 75vh;
+  background-color: blue;
+  color: white;
+  margin: 0 auto;
+  margin: 30px auto;
+}
+.jumbotron img {
+  padding: 40px 0 0 30px;
+}
+.jumbotron h1 {
+  font-size: 3rem;
 }

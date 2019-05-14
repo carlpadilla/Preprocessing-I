@@ -138,46 +138,104 @@ html,
 body {
   height: 100%;
 }
-
-@color: green;
-
 .container {
-  width: 1000px;
-  background-color: @color;
-  margin: 0 auto;
+  max-width: 1000px;
+  margin: auto;
+  box-shadow: 30px 0 40px rgba(0, 0, 0, 0.3), -30px 0 40px rgba(0, 0, 0, 0.3);
 }
 
-header {
-  margin: 1.25rem auto;
-  padding: 10px;
-  display: flex;
+.navigation {
   width: 100%;
-  justify-content: space-between;
+  display: flex;
+  background-color: green;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 60px auto;
 
-  @media (max-width: 515px) {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-  }
-  h1 {
-    font-size: 2rem;
+  nav {
+    display: flex;
 
-    @media (max-width: 515px) {
-      margin-bottom: 20px;
+    a {
+      color: black;
+      text-decoration: none;
+      font-size: 1.2rem;
+      margin: 0.9rem 1rem;
+      padding-right: 1rem;
+
+      &:hover {
+        color: grey;
+      }
     }
   }
-} //Header
+} // Navigation Bar
 
-nav {
-  margin-left: 62px;
-  margin-right: 63px;
+.jumbotron {
+  width: 85%;
+  height: 75vh;
+  background-color: blue;
+  color: white;
+  margin: 0 auto;
+  margin: 30px auto;
 
-  @media (max-width: 515px) {
-    margin-left: 0;
+  img {
+    padding: 40px 0 0 30px;
   }
-  a {
-    margin-left: 20px;
-    font-size: 1.2rem;
-    text-decoration: none;
+  h1 {
+    font-size: 3rem;
   }
-} // Nav
+}
+
+// .container {
+//   //   width: 1000px;
+
+//   margin: 0 auto;
+// }
+
+// header {
+//   background-color: @color;
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   width: 100%;
+
+//   @media (min-width: 515px) {
+//     width: 100%;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     margin: 1.25rem auto;
+//     padding: 10px;
+//   }
+//   h1 {
+//     font-size: 2rem;
+
+//     @media (min-width: 500px) {
+//       //   margin-bottom: 20px;
+//     }
+//   }
+//   .nav-items {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+
+//     @media (min-width: 500px) {
+//       display: flex;
+//       flex-direction: row;
+//       justify-content: space-between;
+//     }
+//   }
+// } //Header
+
+// nav {
+//   margin-left: 62px;
+//   margin-right: 63px;
+
+//   @media (max-width: 515px) {
+//     margin-left: 0;
+//   }
+//   a {
+//     margin-left: 20px;
+//     font-size: 1.2rem;
+//     text-decoration: none;
+//   }
+// } // Nav
