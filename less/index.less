@@ -147,7 +147,7 @@ body {
 .navigation {
   width: 100%;
   display: flex;
-  background-color: green;
+  //   background-color: green;
   flex-direction: row;
   justify-content: flex-end;
   padding: 60px auto;
@@ -172,70 +172,118 @@ body {
 .jumbotron {
   width: 85%;
   height: 75vh;
-  background-color: blue;
-  color: white;
+  background-color: #e9ecef;
+  color: black;
   margin: 0 auto;
   margin: 30px auto;
+  border-radius: 10px;
 
   img {
     padding: 40px 0 0 30px;
   }
-  h1 {
-    font-size: 3rem;
+  .title-info {
+    .title {
+      font-size: 3rem;
+      margin: 20px;
+    }
+    .sub-heading {
+      font-size: 1.3rem;
+      margin: 20px;
+    }
+    .sign-up {
+      border-top: 1px solid gray;
+      padding-top: 20px;
+      font-size: 1.2rem;
+      margin: 20px;
+    }
+    .sign-up-button {
+      padding: 10px;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      background-color: grey;
+      color: white;
+      margin: 20px;
+    }
+  }
+} //header
+
+.main-content {
+  padding: 1.5rem;
+  text-align: center;
+  color: #333;
+
+  #mid-content h2 {
+    font-size: 2rem;
+    padding: 1rem;
+
+    #mid-content p {
+      font-size: 1.8rem;
+    }
+  }
+  .skills {
+    padding: 3rem;
+    text-align: center;
+
+    .skills,
+    h3 {
+      font-size: 2rem;
+      font-weight: 400;
+      padding: 1rem;
+    }
+    .skills,
+    li {
+      font-size: 1.3rem;
+    }
   }
 }
 
-// .container {
-//   //   width: 1000px;
+.work-history {
+  padding: 2rem;
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    padding: 2rem;
 
-//   margin: 0 auto;
-// }
+    th {
+      font-weight: 400;
+      font-size: 1.2rem;
+    }
 
-// header {
-//   background-color: @color;
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-//   width: 100%;
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+  }
+}
 
-//   @media (min-width: 515px) {
-//     width: 100%;
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     margin: 1.25rem auto;
-//     padding: 10px;
-//   }
-//   h1 {
-//     font-size: 2rem;
+.fa-html5 {
+  color: #e34f26;
+}
 
-//     @media (min-width: 500px) {
-//       //   margin-bottom: 20px;
-//     }
-//   }
-//   .nav-items {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
+.fa-css3-alt {
+  color: #264de4;
+}
 
-//     @media (min-width: 500px) {
-//       display: flex;
-//       flex-direction: row;
-//       justify-content: space-between;
-//     }
-//   }
-// } //Header
+.fa-js-square {
+  color: #f0db4f;
+}
 
-// nav {
-//   margin-left: 62px;
-//   margin-right: 63px;
+.fa-less {
+  color: #254a7b;
+}
 
-//   @media (max-width: 515px) {
-//     margin-left: 0;
-//   }
-//   a {
-//     margin-left: 20px;
-//     font-size: 1.2rem;
-//     text-decoration: none;
-//   }
-// } // Nav
+footer {
+  padding: 2rem;
+  margin: auto;
+  color: #333;
+}
+footer h3 {
+  padding: 1rem;
+  font-size: 2.5rem;
+}
