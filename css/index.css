@@ -2,6 +2,12 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+.flex {
+  display: flex;
+}
+.margin {
+  margin: 20px;
+}
 html,
 body,
 div,
@@ -157,11 +163,21 @@ body {
   padding-right: 1rem;
 }
 .navigation nav a:hover {
-  color: grey;
+  color: gray;
+}
+@media (max-width: 600px) {
+  .navigation nav.nav-bar {
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+  }
+  .navigation .nav-items {
+    font-size: 2.5rem;
+  }
 }
 .jumbotron {
   width: 85%;
-  height: 75vh;
+  height: 75%;
   background-color: #e9ecef;
   color: black;
   margin: 0 auto;
@@ -189,7 +205,7 @@ body {
   padding: 10px;
   font-size: 1.2rem;
   border-radius: 5px;
-  background-color: grey;
+  background-color: gray;
   color: white;
   margin: 20px;
 }
