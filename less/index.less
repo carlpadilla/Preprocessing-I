@@ -4,56 +4,306 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+@color: gray;
+@bold: 400;
+
+.flex {
+  display: flex;
+}
+
+.margin {
+  margin: 20px;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
+}
+.container {
+  max-width: 1000px;
+  margin: auto;
+  box-shadow: 30px 0 40px rgba(0, 0, 0, 0.3), -30px 0 40px rgba(0, 0, 0, 0.3);
 }
 
+.navigation {
+  width: 100%;
+  .flex();
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 60px auto;
+
+  nav {
+    .flex();
+
+    a {
+      color: black;
+      text-decoration: none;
+      font-size: 1.2rem;
+      margin: 0.9rem 1rem;
+      padding-right: 1rem;
+
+      &:hover {
+        color: @color;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    nav.nav-bar {
+      .flex();
+      flex-direction: column;
+      margin: 10px auto;
+    }
+    .nav-items {
+      font-size: 2.5rem;
+    }
+  }
+} // Navigation Bar
+
+.jumbotron {
+  width: 85%;
+  height: 75%;
+  background-color: #e9ecef;
+  color: black;
+  margin: 0 auto;
+  margin: 30px auto;
+  border-radius: 10px;
+
+  img {
+    padding: 40px 0 0 30px;
+  }
+  .title-info {
+    .title {
+      font-size: 3rem;
+      margin: 20px;
+    }
+    .sub-heading {
+      font-size: 1.3rem;
+      .margin();
+    }
+    .sign-up {
+      border-top: 1px solid @color;
+      padding-top: 20px;
+      font-size: 1.2rem;
+      .margin();
+    }
+    .sign-up-button {
+      padding: 10px;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      background-color: @color;
+      color: white;
+      .margin();
+    }
+  }
+} //header
+
+.main-content {
+  padding: 1.5rem;
+  text-align: center;
+  color: #333;
+
+  #mid-content h2 {
+    font-size: 2rem;
+    padding: 1rem;
+
+    #mid-content p {
+      font-size: 1.8rem;
+    }
+  }
+  .skills {
+    padding: 3rem;
+    text-align: center;
+
+    .skills,
+    h3 {
+      font-size: 2rem;
+      font-weight: @bold;
+      padding: 1rem;
+    }
+    .skills,
+    li {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.work-history {
+  padding: 2rem;
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    padding: 2rem;
+
+    th {
+      font-weight: @bold;
+      font-size: 1.2rem;
+    }
+
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+  }
+}
+
+.fa-html5 {
+  color: #e34f26;
+}
+
+.fa-css3-alt {
+  color: #264de4;
+}
+
+.fa-js-square {
+  color: #f0db4f;
+}
+
+.fa-less {
+  color: #254a7b;
+}
+
+footer {
+  padding: 2rem;
+  margin: auto;
+  color: #333;
+}
+footer h3 {
+  padding: 1rem;
+  font-size: 2.5rem;
+}
